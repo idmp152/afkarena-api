@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "afkapi"
+version = "0.1.0"
+description = "AFKArena API (FastAPI) application"
+authors = ["ov3rwrite <ilyabelykh123@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+fastapi = "^0.88.0"
+aiosqlite = "^0.17.0"
+aioredis = "^2.0.1"
+sqlalchemy = {extras = ["asyncio"], version = "^1.4.44"}
+sqlalchemy2-stubs = "^0.0.2a29"
+pydantic = "^1.10.2"
+uvicorn = "^0.20.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.0"
+
+[tool.poetry.scripts]
+afkapi = 'afkapi.main:main'
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
